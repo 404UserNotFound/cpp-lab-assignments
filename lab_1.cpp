@@ -1,8 +1,8 @@
-
 #include <iostream>
 using namespace std;
 
-
+// Check if inputted year is a leap year, under the given criteria.
+//This code is not to calculate an actual leap year.
 bool isLeapYear(int year)
 {
 	if (year%4==0) {
@@ -26,6 +26,7 @@ bool isLeapYear(int year)
 
 }
 
+//Reverse given integer function.
 int Reversed(int testNumber)
 {
 	int reverseNum = 0;
@@ -35,6 +36,8 @@ int Reversed(int testNumber)
 		}
 	return reverseNum;
 }
+
+//Check if palindrome, using the reverse function.
 bool isAPalindrome(int testNumber)
 {
 	if (Reversed(testNumber) == testNumber) {
@@ -44,6 +47,7 @@ bool isAPalindrome(int testNumber)
 		return false;
 	}
 }
+//Check if a given number is a prime number.
 bool isAPrimeNumber(int numbertoTest)
 {
 	if(numbertoTest <= 1) {
@@ -62,7 +66,7 @@ bool isAPrimeNumber(int numbertoTest)
 		
 }
 
-
+//Calculation of Binary number to Decimal
 int convertBinarytoDecimal(int binaryNumber)
 {
 	int decimal = 0;
@@ -77,6 +81,14 @@ int convertBinarytoDecimal(int binaryNumber)
 		}
 	return decimal;
 }
+
+/*Must output
+A
+AA
+AAA
+AAAA
+*/
+
 void drawRightAngledTriangle()
 {
 		for (int i = 0; i < 4; i++)
@@ -87,14 +99,6 @@ void drawRightAngledTriangle()
 			}
 			cout << "\n";
 		}
-}
-void drawIsocelesTriangle()
-{
-
-}
-void drawIsocelesTriangle2()
-{
-
 }
 
 //Driver below checks if functions work as intended.
@@ -123,6 +127,8 @@ int main()
 	else {
 		std::cout << "no" << std::endl;
 	}
+	
+	
 	std::cout << "NumberReversed" << std::endl;
 	if (Reversed(123) == 321)
 	{
@@ -147,6 +153,8 @@ int main()
 		std::cout << "no" << std::endl;
 	}
 
+	
+	
 	std::cout << "Palindrome" << std::endl;
 	if (isAPalindrome(1))
 	{
@@ -169,6 +177,8 @@ int main()
 	else {
 		std::cout << "no" << std::endl;
 	}
+	
+	
 	std::cout << "Prime Number" << std::endl;
 	if (isAPrimeNumber(3))
 	{
